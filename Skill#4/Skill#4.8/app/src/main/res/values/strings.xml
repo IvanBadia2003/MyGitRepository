@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Skill#4.8</string>
+    <string name="titulo">BIENVENIDOS AL EJEMPLO</string>
+    <string name="txt_btn_ingresar">INRGESAR</string>
+    <string name="txt_msj_bienvenido">hola, Bienvenido:</string>
+
+</resources>
