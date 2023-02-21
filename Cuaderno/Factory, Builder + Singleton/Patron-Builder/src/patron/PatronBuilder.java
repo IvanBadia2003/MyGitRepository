@@ -22,7 +22,6 @@ public class PatronBuilder {
         PizzaBuilder picantePizza 
             = PIZZA_FACTORY.getInstance
                     (PIZZA_FACTORY.PICANTE_PIZZA);
-        picantePizza.buildRelleno(); 
         // VINCULACIÓN DINÁMICA
         
         cocina.setPizzaBuilder(hawaianPizza);

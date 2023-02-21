@@ -2,21 +2,21 @@ package patron_adapter;
 
 
 public class AdaptadorLampara implements Conectable{
-    private LamparaInglesa lInglesa = new LamparaInglesa();
     
-    @Override
-    public boolean isEncendida() {
-        return this.lInglesa.isOn();
+    private LamparaInglesa lInglesa1 = new LamparaInglesa();
+    
+    public boolean isEncendida(){
+        return this.lInglesa1.isOn();
     }
-
-    @Override
-    public void encender() {
-        this.lInglesa.on();
+    
+    public void encender(){
+        this.lInglesa1.on();
     }
 
     @Override
     public void apagar() {
-        this.lInglesa.off();
+        this.lInglesa1.off();
     }
+    
     
 }
