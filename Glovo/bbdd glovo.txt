@@ -1,0 +1,151 @@
+CREATE TABLE restaurante(
+id_restaurante int auto_increment,
+nombre varchar(20) not null,
+descripcion varchar(250) not null,
+puntuacion int(1),
+ventas int(4) not null,
+CONSTRAINT PK_RESTAURANTE primary key (id_restaurante)
+);
+
+CREATE TABLE producto(
+id_producto int auto_increment,
+nombre varchar(20) not null,
+precio decimal(3,2) not null,
+CONSTRAINT PK_PRODUCTO primary key (id_producto)
+);
+
+CREATE TABLE genero(
+id_genero int auto_increment,
+nombre varchar(20) not null,
+CONSTRAINT PK_PRODUCTO primary key (id_genero)
+);
+
+CREATE TABLE producto_restaurante (
+id_productorestaurante int auto_increment,
+id_producto int(3) NOT NULL,
+id_restaurante int(3) NOT NULL,
+CONSTRAINT PK_PRODUCTO primary key (id_productorestaurante),
+CONSTRAINT FK_PRODUCTO_RESTAURANTE foreign key (id_producto) references producto(id_producto),
+CONSTRAINT FK_RESTAURANTE_PRODUCTO foreign key (id_restaurante) references restaurante(id_restaurante)
+);
+
+CREATE TABLE genero_restaurante (
+id_generorestaurante int auto_increment,
+id_genero int(3) NOT NULL,
+id_restaurante int(3) NOT NULL,
+CONSTRAINT PK_PRODUCTO primary key (id_generorestaurante),
+CONSTRAINT FK_GENERO_RESTAURANTE foreign key (id_genero) references genero(id_genero),
+CONSTRAINT FK_RESTAURANTE_GENERO foreign key (id_restaurante) references restaurante(id_restaurante)
+);
+
+INSERT INTO genero (nombre) VALUES ('Pizzeria');
+INSERT INTO genero (nombre) VALUES ('Hamburgueseria');
+INSERT INTO genero (nombre) VALUES ('Sandwicheria');
+INSERT INTO genero (nombre) VALUES ('Pollo frito');
+INSERT INTO genero (nombre) VALUES ('Comida Mexicana');
+INSERT INTO genero (nombre) VALUES ('Cafetería');
+INSERT INTO genero (nombre) VALUES ('Panadería');
+
+
+INSERT INTO `restaurante` (`nombre`, `descripcion`, `puntuacion`, `ventas`) VALUES
+('Mc Donalds', 'Su menú consiste en hamburguesas papas fritas refrescos ensaladas y otros productos y se caracteriza por ofrecer comidas a precios económicos y en un ambiente informal y acogedor', 5, 564);
+
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Pizza Hut', 'Ofrecemos una amplia variedad de pizzas y acompañamientos en un ambiente familiar', 4, 420);
+
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Subway', 'Personaliza tu propio sándwich con nuestras opciones de panes carnes y vegetales', 3, 312);
+
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Burger King', 'Preparamos nuestras hamburguesas a la parrilla y ofrecemos una variedad de opciones de menu', 2, 589);
+
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('KFC', 'Disfruta de nuestro pollo frito y acompañamientos en un ambiente acogedor', 5, 265);
+
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Taco Bell', 'Ofrecemos una variedad de opciones de tacos burritos y otros platillos mexicanos', 3, 187);
+
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Starbucks', 'Disfruta de una amplia variedad de bebidas y alimentos preparados con café', 4, 893);
+
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Dominos Pizza',  'Entregamos pizzas calientes y frescas a tu puerta en un tiempo récord', 3, 356);
+
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Panera Bread', 'Ofrecemos una variedad de panes sopas ensaladas y sándwiches preparados con ingredientes frescos', 4, 423);
+
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Chipotle',  'Personaliza tu propio burrito tazón o ensalada con nuestras opciones de ingredientes frescos', 2, 278);
+
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Papa Johns', 'Ofrecemos una amplia variedad de pizzas y acompañamientos en un ambiente familiar', 1, 319);
+
+
+
+
+
+INSERT INTO producto (nombre, precio) VALUES ('Cocacola', 2);
+INSERT INTO producto (nombre, precio) VALUES ('Pepsi', 2.5);
+INSERT INTO producto (nombre, precio) VALUES ('Sprite', 2);
+INSERT INTO producto (nombre, precio) VALUES ('Fanta', 2.25);
+INSERT INTO producto (nombre, precio) VALUES ('Agua mineral', 1.5);
+INSERT INTO producto (nombre, precio) VALUES ('Cerveza', 3.5);
+INSERT INTO producto (nombre, precio) VALUES ('Ensalada', 1.25);
+INSERT INTO producto (nombre, precio) VALUES ('Chips de maíz', 1.75);
+INSERT INTO producto (nombre, precio) VALUES ('Chocolate', 2.75);
+INSERT INTO producto (nombre, precio) VALUES ('Hamburguesa', 0.75);
+INSERT INTO producto (nombre, precio) VALUES ('Café', 2.25);
+INSERT INTO producto (nombre, precio) VALUES ('Té', 1.75);
+INSERT INTO producto (nombre, precio) VALUES ('Burrito', 0.5);
+INSERT INTO producto (nombre, precio) VALUES ('Pizza', 0.75);
+INSERT INTO producto (nombre, precio) VALUES ('Taco', 0.75);
+
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (10, 1);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (7, 1);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (1, 2);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (2, 2);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (2, 3);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (3, 3);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (2, 4);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (3, 4);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (3, 5);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (4, 5);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (3, 6);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (4, 6);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (4, 7);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (5, 7);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (4, 8);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (5, 8);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (5, 9);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (1, 9);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (5, 10);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (1, 10);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (5, 11);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (1, 11);
+
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (1, 1);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (2, 1);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (14, 2);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (15, 2);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (14, 3);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (15, 3);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (1, 4);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (2, 4);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (1, 5);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (2, 5);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (15, 6);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (13, 6);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (11, 7);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (12, 7);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (14, 8);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (9, 8);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (9, 9);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (15, 9);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (15, 10);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (13, 10);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (8, 11);
+INSERT INTO producto_restaurante (id_producto, id_restaurante) VALUES (7, 11);
+
+INSERT INTO genero_restaurante(id_genero, id_restaurante) VALUES (2, 1);
+INSERT INTO genero_restaurante(id_genero, id_restaurante) VALUES (1, 2);
+INSERT INTO genero_restaurante(id_genero, id_restaurante) VALUES (3, 3);
+INSERT INTO genero_restaurante(id_genero, id_restaurante) VALUES (2, 4);
+INSERT INTO genero_restaurante(id_genero, id_restaurante) VALUES (4, 5);
+INSERT INTO genero_restaurante(id_genero, id_restaurante) VALUES (5, 6);
+INSERT INTO genero_restaurante(id_genero, id_restaurante) VALUES (6, 7);
+INSERT INTO genero_restaurante(id_genero, id_restaurante) VALUES (1, 8);
+INSERT INTO genero_restaurante(id_genero, id_restaurante) VALUES (7, 9);
+INSERT INTO genero_restaurante(id_genero, id_restaurante) VALUES (5, 10);
+INSERT INTO genero_restaurante(id_genero, id_restaurante) VALUES (1, 11);
+
+
