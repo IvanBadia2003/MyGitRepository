@@ -53,8 +53,6 @@
                 android:value="" />
         </activity>
 
-
-
         <activity
             android:name=".Inicio"
             android:exported="true">
@@ -64,6 +62,13 @@
         </activity>
         <activity
             android:name=".Compra_Activity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CompraConfirmada"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"

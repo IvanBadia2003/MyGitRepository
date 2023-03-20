@@ -4,6 +4,7 @@ nombre varchar(20) not null,
 descripcion varchar(250) not null,
 puntuacion int(1),
 ventas int(4) not null,
+imagen varchar(250),
 CONSTRAINT PK_RESTAURANTE primary key (id_restaurante)
 );
 
@@ -47,28 +48,28 @@ INSERT INTO genero (nombre) VALUES ('Cafetería');
 INSERT INTO genero (nombre) VALUES ('Panadería');
 
 
-INSERT INTO `restaurante` (`nombre`, `descripcion`, `puntuacion`, `ventas`) VALUES
-('Mc Donalds', 'Su menú consiste en hamburguesas papas fritas refrescos ensaladas y otros productos y se caracteriza por ofrecer comidas a precios económicos y en un ambiente informal y acogedor', 5, 564);
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas, imagen) VALUES
+('Mc Donalds', 'Su menú consiste en hamburguesas papas fritas refrescos ensaladas y otros productos y se caracteriza por ofrecer comidas a precios económicos y en un ambiente informal y acogedor', 5, 564, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAxp86r4j0dfqwnim5eoisanHudJi6a5iasA&usqp=CAU');
 
-INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Pizza Hut', 'Ofrecemos una amplia variedad de pizzas y acompañamientos en un ambiente familiar', 4, 420);
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas, imagen) VALUES ('Pizza Hut', 'Ofrecemos una amplia variedad de pizzas y acompañamientos en un ambiente familiar', 4, 420, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Yrub7dFrRgWEb88sBHfC-O_N5h6nRJQnNQ&usqp=CAU');
 
-INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Subway', 'Personaliza tu propio sándwich con nuestras opciones de panes carnes y vegetales', 3, 312);
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas, imagen) VALUES ('Subway', 'Personaliza tu propio sándwich con nuestras opciones de panes carnes y vegetales', 3, 312, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdFFlsKyEugS5rnzLq-se_grSurK4uI4pahA&usqp=CAU');
 
-INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Burger King', 'Preparamos nuestras hamburguesas a la parrilla y ofrecemos una variedad de opciones de menu', 2, 589);
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas, imagen) VALUES ('Burger King', 'Preparamos nuestras hamburguesas a la parrilla y ofrecemos una variedad de opciones de menu', 2, 589, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi9XsmXDtE9f0US2AMXhessm226yBoXyAA7Q&usqp=CAU');
 
-INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('KFC', 'Disfruta de nuestro pollo frito y acompañamientos en un ambiente acogedor', 5, 265);
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas, imagen) VALUES ('KFC', 'Disfruta de nuestro pollo frito y acompañamientos en un ambiente acogedor', 5, 265, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRxi4sBRHUS3ZLzXOe8K9fIRmW7DsF4S132A&usqp=CAU');
 
-INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Taco Bell', 'Ofrecemos una variedad de opciones de tacos burritos y otros platillos mexicanos', 3, 187);
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas, imagen) VALUES ('Taco Bell', 'Ofrecemos una variedad de opciones de tacos burritos y otros platillos mexicanos', 3, 187, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKkCuiY1YGIJl_-H-pm_ioWL0NQWhofmKJ7A&usqp=CAU');
 
-INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Starbucks', 'Disfruta de una amplia variedad de bebidas y alimentos preparados con café', 4, 893);
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas, imagen) VALUES ('Starbucks', 'Disfruta de una amplia variedad de bebidas y alimentos preparados con café', 4, 893, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkVYItTtDPU8BTqnO29pq3mG5XxW8xZpQ3XQ&usqp=CAU');
 
-INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Dominos Pizza',  'Entregamos pizzas calientes y frescas a tu puerta en un tiempo récord', 3, 356);
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas, imagen) VALUES ('Dominos Pizza',  'Entregamos pizzas calientes y frescas a tu puerta en un tiempo récord', 3, 356, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBAF4CWvunzBydU5qn6bryFyZtC5cGDO0SGQ&usqp=CAU');
 
-INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Panera Bread', 'Ofrecemos una variedad de panes sopas ensaladas y sándwiches preparados con ingredientes frescos', 4, 423);
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas, imagen) VALUES ('Panera Bread', 'Ofrecemos una variedad de panes sopas ensaladas y sándwiches preparados con ingredientes frescos', 4, 423, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdPySEGF5D5hnulo-UBv3fXpJWp7gWHU-9EA&usqp=CAU');
 
-INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Chipotle',  'Personaliza tu propio burrito tazón o ensalada con nuestras opciones de ingredientes frescos', 2, 278);
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas, imagen) VALUES ('Chipotle',  'Personaliza tu propio burrito tazón o ensalada con nuestras opciones de ingredientes frescos', 2, 278, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScLNIb-4LJtNwmqb8l6gqerXQ2rtqKjAETyQ&usqp=CAU');
 
-INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas) VALUES ('Papa Johns', 'Ofrecemos una amplia variedad de pizzas y acompañamientos en un ambiente familiar', 1, 319);
+INSERT INTO restaurante (nombre, descripcion, puntuacion, ventas, imagen) VALUES ('Papa Johns', 'Ofrecemos una amplia variedad de pizzas y acompañamientos en un ambiente familiar', 1, 319, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLn96oQtBD8yQwFm4dxC3zwlPldOuUNQDDDw&usqp=CAU');
 
 
 

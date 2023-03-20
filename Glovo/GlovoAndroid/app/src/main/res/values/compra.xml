@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="restaurante">
+        <item>Seleccione</item>
+        <item>MC Donalds</item>
+        <item>KFC</item>
+        <item>Pizza Hut</item>
+        <item>Burguer King</item>
+        <item>Starbucks</item>
+    </string-array>
+    -
+    <string-array name="Bebida">
+        <item>Seleccione</item>
+        <item>Cafe</item>
+        <item>Te</item>
+        <item>Cocacola</item>
+        <item>Sprite</item>
+        <item>Fanta</item>
+    </string-array>
+    -
+    <string-array name="Comida">
+        <item>Seleccione</item>
+        <item>Hamburguesa</item>
+        <item>Pizza</item>
+        <item>Ensalada</item>
+        <item>Taco</item>
+        <item>Burrito</item>
+        <item>Chips de maiz</item>
+        <item>Chocolate</item>
+    </string-array>
+</resources>

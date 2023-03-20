@@ -7,13 +7,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FECC1B">
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="415dp"
             android:layout_height="75dp"
-            android:background="@android:color/holo_red_light"
+            android:background="#00A081"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +30,7 @@
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cines Aragon"
+                    android:text="GLOVO"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="16sp"
@@ -78,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="21dp"
-            android:text="Seleccione el Cine"
+            android:text="Seleccione el Restaurante"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -91,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Seleccione la Hora"
+            android:text="Seleccione Bebida"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -113,7 +114,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Seleccione Butaca"
+            android:text="Seleccione Comida"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -125,14 +126,14 @@
             android:id="@+id/confirmar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/holo_red_light"
+            android:backgroundTint="#00A081"
             android:text="Comfirma Compra"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinnerButaca"
-            app:layout_constraintVertical_bias="0.343" />
+            app:layout_constraintVertical_bias="0.351" />
 
         <Spinner
             android:id="@+id/spinnerButaca"

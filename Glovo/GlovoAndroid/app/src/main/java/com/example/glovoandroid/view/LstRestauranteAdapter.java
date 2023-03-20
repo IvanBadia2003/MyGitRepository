@@ -114,7 +114,6 @@ public class LstRestauranteAdapter extends RecyclerView.Adapter<LstRestauranteAd
 
             idImgPelicula = (ImageView) itemView.findViewById(R.id.idImgRestaurante);
             fichatecnica = (Button) itemView.findViewById(R.id.idFichatecnica);
-            idCompra = (Button) itemView.findViewById(R.id.idCompra);
             estrella1 = (ImageView) itemView.findViewById(R.id.estrella1);
             estrella2 = (ImageView) itemView.findViewById(R.id.estrella2);
             estrella3 = (ImageView) itemView.findViewById(R.id.estrella3);
