@@ -3,23 +3,21 @@ package com.example.glovoandroid.entities;
 import com.google.gson.annotations.SerializedName;
 
 public class Restaurante {
-    @SerializedName("Nombre")
+    @SerializedName("nombre")
     private String nombre;
 
-    @SerializedName("Descripcion")
+    @SerializedName("descripcion")
     private String descripcion;
 
-    @SerializedName("Puntiacion")
+    @SerializedName("puntiacion")
     private int puntiacion;
 
-    @SerializedName("Ventas")
+    @SerializedName("ventas")
     private int ventas;
-    @SerializedName("Imagen")
+    @SerializedName("imagen")
     private String imagen;
-    @SerializedName("genero")
-    private String genero;
 
-    @SerializedName("Id_restaurante")
+    @SerializedName("id_restaurante")
     private int id_restaurante;
 
 
@@ -63,13 +61,7 @@ public class Restaurante {
         this.imagen = imagen;
     }
 
-    public String getGenero() {
-        return genero;
-    }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
 
     public int getId_restaurante() {
         return id_restaurante;
@@ -87,7 +79,6 @@ public class Restaurante {
                 ", puntiacion=" + puntiacion +
                 ", ventas=" + ventas +
                 ", imagen='" + imagen + '\'' +
-                ", genero='" + genero + '\'' +
                 ", id_restaurante=" + id_restaurante +
                 '}';
     }

@@ -5,22 +5,22 @@
  */
 package DAO;
 
-import Clases.Butacas;
+import Clases.Producto;
 import java.util.ArrayList;
 
 /**
  *
  * @author S1-PC52
  */
-public class ButacasDAO implements DAO<Butacas, Integer>{
+public class ProductoDAO implements DAO<Producto, Integer>{
 
     @Override
-    public void visualizar(Butacas bean) {
+    public void visualizar(Producto bean) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public ArrayList<Butacas> findAll(Butacas bean) {
+    public ArrayList<Producto> findAll(Producto bean) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

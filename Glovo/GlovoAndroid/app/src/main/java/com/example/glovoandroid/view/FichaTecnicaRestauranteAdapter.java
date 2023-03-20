@@ -36,7 +36,7 @@ public class FichaTecnicaRestauranteAdapter extends RecyclerView.Adapter<FichaTe
         holder.idDescripcion.setText(restaurante.getDescripcion());
         holder.idPuntuacion.setText(restaurante.getPuntiacion());
         holder.idVentas.setText(restaurante.getVentas());
-        holder.idImagen.setText(restaurante.getImagen());
+
 
     }
 
@@ -52,17 +52,15 @@ public class FichaTecnicaRestauranteAdapter extends RecyclerView.Adapter<FichaTe
         private TextView idDescripcion;
         private TextView idPuntuacion;
         private TextView idVentas;
-        private TextView idImagen;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            idNombre = itemView.findViewById(R.id.idTitulo);
-            idDescripcion= itemView.findViewById(R.id.idTituloOriginal);
-            idPuntuacion = itemView.findViewById(R.id.idDireccion);
-            idVentas = itemView.findViewById(R.id.idPais);
-            idImagen = itemView.findViewById(R.id.idAno);
+            idNombre = itemView.findViewById(R.id.idNombre);
+            idDescripcion= itemView.findViewById(R.id.idDescripcion);
+            idPuntuacion = itemView.findViewById(R.id.idPuntuacion);
+            idVentas = itemView.findViewById(R.id.idVentas);
 
         }
     }

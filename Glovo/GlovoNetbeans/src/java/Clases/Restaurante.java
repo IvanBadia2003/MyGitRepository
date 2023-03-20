@@ -16,72 +16,65 @@ import java.util.ArrayList;
  */
 public class Restaurante{
 
-    private int Id_restaurante;
-    private String Nombre;
-    private String Descripcion;
-    private int Puntiacion;
-    private int Ventas;
-    private String Imagen;
-    private String genero;
+    private int id_restaurante;
+    private String nombre;
+    private String descripcion;
+    private int puntiacion;
+    private int ventas;
+    private String imagen;
 
     public Restaurante() {
     }
 
     public int getId_restaurante() {
-        return Id_restaurante;
+        return id_restaurante;
     }
 
-    public void setId_restaurante(int Id_restaurante) {
-        this.Id_restaurante = Id_restaurante;
+    public void setId_restaurante(int id_restaurante) {
+        this.id_restaurante = id_restaurante;
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getDescripcion() {
-        return Descripcion;
+        return descripcion;
     }
 
-    public void setDescripcion(String Descripcion) {
-        this.Descripcion = Descripcion;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public int getPuntiacion() {
-        return Puntiacion;
+        return puntiacion;
     }
 
-    public void setPuntiacion(int Puntiacion) {
-        this.Puntiacion = Puntiacion;
+    public void setPuntiacion(int puntiacion) {
+        this.puntiacion = puntiacion;
     }
 
     public int getVentas() {
-        return Ventas;
+        return ventas;
     }
 
-    public void setVentas(int Ventas) {
-        this.Ventas = Ventas;
+    public void setVentas(int ventas) {
+        this.ventas = ventas;
     }
 
     public String getImagen() {
-        return Imagen;
+        return imagen;
     }
 
-    public void setImagen(String Imagen) {
-        this.Imagen = Imagen;
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
+    
 
 
     public static String toArrayJSon(ArrayList<Restaurante> restaurante) {

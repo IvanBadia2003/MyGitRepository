@@ -52,6 +52,8 @@ public class ApiRestaurante {
                         ArrayList<Restaurante> lstRestaurantes = 
                                 restauranteDAO.findAll(null);
                         
+
+                        
                         // Transformar de ArrayList a JSON
                      
                        
@@ -65,9 +67,21 @@ public class ApiRestaurante {
                         ArrayList<Restaurante> lstRestaurantePizzeria = 
                                 restaurantePizzeria.getGeneroPizzeria(null);
                         
-                        /* RestauranteDAO peliculaMasvotadas = new RestauranteDAO();
-                        ArrayList<Restaurante> lstPeliculasMasvotadas = 
-                                peliculaMasvotadas.pelisMasvotadas(null);*/
+                       RestauranteDAO restaurantePolloFrito = new RestauranteDAO();
+                        ArrayList<Restaurante> lstRestaurantePolloFrito = 
+                                restaurantePolloFrito.getGeneroPolloFrito(null);
+                        
+//                       RestauranteDAO restauranteSandwicheria = new RestauranteDAO();
+//                        ArrayList<Restaurante> lstRestauranteSandwicheria = 
+//                                restauranteSandwicheria.getGeneroSandwicheria(null);
+                        
+                         RestauranteDAO restauranteMasVentas = new RestauranteDAO();
+                        ArrayList<Restaurante> lstRestauranteMasVentas = 
+                                restauranteMasVentas.getRestauranteMasVentas(null);
+                        
+                         RestauranteDAO restauranteMasPuntuacion = new RestauranteDAO();
+                        ArrayList<Restaurante> lstRestauranteMasPuntuacion = 
+                                restauranteMasPuntuacion.getRestauranteMasPuntuacion(null);
                         
                         RestauranteDAO RestauranteFichatecnica = new RestauranteDAO();
                         ArrayList<Restaurante> lstRestauranteFicha = 
@@ -79,7 +93,10 @@ public class ApiRestaurante {
               index.setRestaurante(lstRestaurantes);
               index.setRestauranteHamburguseria(lstRestauranteHamburgueseria);
               index.setRestaurantePizzeria(lstRestaurantePizzeria);
-              /*index.setRestauranteMasvotadas(lstPeliculasMasvotadas);*/
+              index.setRestaurantePolloFrito(lstRestaurantePolloFrito);
+//              index.setRestauranteSandwicheria(lstRestauranteSandwicheria);
+              index.setRestauranteMasVentas(lstRestauranteMasVentas);
+              index.setRestauranteMasPuntuacion(lstRestauranteMasPuntuacion);
               index.setFichatecnica(lstRestauranteFicha);
               
               ArrayList<Index> lstIndex = new ArrayList<Index>();

@@ -11,27 +11,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class FiltrosRestauranteActivity extends AppCompatActivity {
 
-    ImageView flecha;
+
     EditText filtro;
     Button buscar;
-    Button pelicula;
+    Button restaurante;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.filtros_restaurantes);
 
-        flecha = (ImageView) findViewById(R.id.idFlecha);
-
-        flecha.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent screenChanger = new Intent(getBaseContext(),
-                        Inicio.class
-                );
-                startActivity(screenChanger);
-            }
-        });
 
         filtro = (EditText) findViewById(R.id.idFiltro);
         buscar = (Button) findViewById(R.id.idBtnBuscar);
@@ -54,8 +43,8 @@ public class FiltrosRestauranteActivity extends AppCompatActivity {
             }
         });
 
-        pelicula = (Button) findViewById(R.id.idMostrarPeli);
-        pelicula.setOnClickListener(new View.OnClickListener() {
+        restaurante = (Button) findViewById(R.id.idMostrarRestaurante);
+        restaurante.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent screenChanger = new Intent(getBaseContext(),

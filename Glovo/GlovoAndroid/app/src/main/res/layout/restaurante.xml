@@ -68,7 +68,7 @@
                     app:srcCompat="@android:drawable/btn_star_big_off" />
 
                 <ImageView
-                    android:id="@+id/idImgPeli"
+                    android:id="@+id/idImgRestaurante"
                     android:layout_width="203dp"
                     android:layout_height="260dp"
                     android:layout_marginTop="16dp"
@@ -86,10 +86,10 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="16dp"
                     android:backgroundTint="#00A081"
-                    android:text="Comprar Entrada"
+                    android:text="Comprar Comida"
                     app:layout_constraintEnd_toStartOf="@+id/idFichatecnica"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/idImgPeli" />
+                    app:layout_constraintTop_toBottomOf="@+id/idImgRestaurante" />
 
                 <Button
                     android:id="@+id/idFichatecnica"
@@ -98,9 +98,9 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="16dp"
                     android:backgroundTint="#00A081"
-                    android:text="Ficha Tecnica"
+                    android:text="Ficha Descriptiva"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/idImgPeli" />
+                    app:layout_constraintTop_toBottomOf="@+id/idImgRestaurante" />
 
                 <ImageView
                     android:id="@+id/estrella4"

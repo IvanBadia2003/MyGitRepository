@@ -47,7 +47,7 @@ public class LstRestauranteAdapter extends RecyclerView.Adapter<LstRestauranteAd
                         FichaDescriptiva.class
                 );
                 Bundle filtroBundle = new Bundle();
-                filtroBundle.putInt("idRestaurante",restaurante.getId_restaurante());
+                filtroBundle.putInt("id_restaurante",restaurante.getId_restaurante());
 
                 screenChanger.putExtras(filtroBundle);
                 holder.fichatecnica.getContext().startActivity(screenChanger);
@@ -112,7 +112,7 @@ public class LstRestauranteAdapter extends RecyclerView.Adapter<LstRestauranteAd
         public ViewHolder(View itemView) {
             super(itemView);
 
-            idImgPelicula = (ImageView) itemView.findViewById(R.id.idImgPeli);
+            idImgPelicula = (ImageView) itemView.findViewById(R.id.idImgRestaurante);
             fichatecnica = (Button) itemView.findViewById(R.id.idFichatecnica);
             idCompra = (Button) itemView.findViewById(R.id.idCompra);
             estrella1 = (ImageView) itemView.findViewById(R.id.estrella1);

@@ -3,6 +3,7 @@ package com.example.glovoandroid;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -19,11 +20,15 @@ import com.example.glovoandroid.view.LstRestauranteContract;
 import java.util.ArrayList;
 
 public class lst_restaurantes extends AppCompatActivity implements LstRestauranteContract.View{
+
     String texto;
     ImageView flecha;
     String Hamburgueseria = "Hamburgueseria";
     String Pizzeria = "Pizzeria";
-    String Cinco = "Cinco";
+    String PolloFrito = "Pollo frito";
+    String Sandwicheria = "Sandwicheria";
+    String MasVentas = "Ventas";
+    String MasPuntuacion = "Puntuacion";
     ArrayList<Restaurante> lstRestaurantes;
     LstRestaurantePresenter lstRestaurantePresenter;
     ImageView imgRestaurante;
@@ -40,26 +45,16 @@ public class lst_restaurantes extends AppCompatActivity implements LstRestaurant
 
 
 
+
         initComponentes();
         initPresenter();
         initData();
 
 
-        flecha.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent screenChanger = new Intent(getBaseContext(),
-                        FiltrosRestauranteActivity.class
-                );
-                startActivity(screenChanger);
-            }
-        });
-
     }
     private void initComponentes() {
         lstRestaurantes = new ArrayList<>();
-        imgRestaurante = findViewById(R.id.idImgPeli);
-        flecha = (ImageView) findViewById(R.id.idFlechalstPelis);
+        imgRestaurante = findViewById(R.id.idImgRestaurante);
 
     }
 
@@ -87,17 +82,26 @@ public class lst_restaurantes extends AppCompatActivity implements LstRestaurant
             if(texto.equals(Pizzeria)){
                 lstRestaurantes = lstIndex.get(0).getRestaurantePizzeria();
                 Toast.makeText(this,"Restaurante de "+texto, Toast.LENGTH_SHORT).show();
+            }if(texto.equals(PolloFrito)){
+                lstRestaurantes = lstIndex.get(0).getRestaurantePolloFrito();
+                Toast.makeText(this,"Restaurante de "+texto, Toast.LENGTH_SHORT).show();
+            }if(texto.equals(Sandwicheria)){
+                lstRestaurantes = lstIndex.get(0).getRestauranteSandwicheria();
+                Toast.makeText(this,"Restaurante de "+texto, Toast.LENGTH_SHORT).show();
             }
-            /*if(texto.equals(Cinco)){
-                lstRestaurantes = lstIndex.get(0).getPeliculasMasvotadas();
-                Toast.makeText(this, "Peliculas con una valoracion"+texto, Toast.LENGTH_SHORT).show();
-            }*/
+            if(texto.equals(MasVentas)){
+                lstRestaurantes = lstIndex.get(0).getRestauranteMasVentas();
+                Toast.makeText(this, "Restaurantes con mas "+texto, Toast.LENGTH_SHORT).show();
+            }if(texto.equals(MasPuntuacion)){
+                lstRestaurantes = lstIndex.get(0).getRestauranteMasPuntuacion();
+                Toast.makeText(this, "Restaurantes con mas "+texto, Toast.LENGTH_SHORT).show();
+            }
 
-        }else {
+        } else {
             lstRestaurantes = lstIndex.get(0).getRestaurante();
         }
 
-        recyclerRestaurante = (RecyclerView) findViewById(R.id.recyclerViewPelis);
+        recyclerRestaurante = (RecyclerView) findViewById(R.id.listaRestaurantes);
         recyclerRestaurante.setLayoutManager(new LinearLayoutManager(this));
 
         LstRestauranteAdapter adapter = new LstRestauranteAdapter(lstRestaurantes,this);

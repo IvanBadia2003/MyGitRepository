@@ -18,7 +18,10 @@ public class Index {
     ArrayList<Restaurante> restaurante = new ArrayList<Restaurante>();
     ArrayList<Restaurante> restauranteHamburguseria = new ArrayList<Restaurante>();
     ArrayList<Restaurante> restaurantePizzeria = new ArrayList<Restaurante>();
-    ArrayList<Restaurante> restauranteMasvotadas = new ArrayList<Restaurante>();
+    ArrayList<Restaurante> restaurantePolloFrito = new ArrayList<Restaurante>();
+    ArrayList<Restaurante> restauranteSandwicheria = new ArrayList<Restaurante>();
+    ArrayList<Restaurante> restauranteMasVentas = new ArrayList<Restaurante>();
+    ArrayList<Restaurante> restauranteMasPuntuacion = new ArrayList<Restaurante>();
     ArrayList<Restaurante> fichatecnica = new ArrayList<Restaurante>();
     
     public Index() {
@@ -56,13 +59,38 @@ public class Index {
         this.restaurantePizzeria = restaurantePizzeria;
     }
 
-    public ArrayList<Restaurante> getRestauranteMasvotadas() {
-        return restauranteMasvotadas;
+    public ArrayList<Restaurante> getRestauranteMasVentas() {
+        return restauranteMasVentas;
     }
 
-    public void setRestauranteMasvotadas(ArrayList<Restaurante> restauranteMasvotadas) {
-        this.restauranteMasvotadas = restauranteMasvotadas;
+    public void setRestauranteMasVentas(ArrayList<Restaurante> restauranteMasVentas) {
+        this.restauranteMasVentas = restauranteMasVentas;
     }
+
+    public ArrayList<Restaurante> getRestauranteMasPuntuacion() {
+        return restauranteMasPuntuacion;
+    }
+
+    public void setRestauranteMasPuntuacion(ArrayList<Restaurante> restauranteMasPuntuacion) {
+        this.restauranteMasPuntuacion = restauranteMasPuntuacion;
+    }
+
+    public ArrayList<Restaurante> getRestaurantePolloFrito() {
+        return restaurantePolloFrito;
+    }
+
+    public void setRestaurantePolloFrito(ArrayList<Restaurante> restaurantePolloFrito) {
+        this.restaurantePolloFrito = restaurantePolloFrito;
+    }
+
+    public ArrayList<Restaurante> getRestauranteSandwicheria() {
+        return restauranteSandwicheria;
+    }
+
+    public void setRestauranteSandwicheria(ArrayList<Restaurante> restauranteSandwicheria) {
+        this.restauranteSandwicheria = restauranteSandwicheria;
+    }
+
 
     
     

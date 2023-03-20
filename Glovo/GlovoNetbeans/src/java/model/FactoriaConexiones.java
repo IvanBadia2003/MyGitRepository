@@ -14,7 +14,7 @@ public class FactoriaConexiones {
     public static Motor getInstance(int valor) {
         switch (valor) {
             case 1:
-               return new Motor("jdbc:mysql://localhost:3306/peliculas","root", "", "com.mysql.cj.jdbc.Driver");
+               return new Motor("jdbc:mysql://localhost:3306/glovo","root", "", "com.mysql.cj.jdbc.Driver");
                
             case 2:
              return new Motor("jdbc:oracle:thin:@localhost:1521:XE","ejemplo", "ejemplo", "oracle.jdbc.OracleDriver");
